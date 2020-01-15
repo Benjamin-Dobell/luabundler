@@ -7,4 +7,4 @@ cache: yarn
 script:
     - ./bin/run --version
     - ./bin/run --help
-    - yarn run prepack
+    - yarn build
