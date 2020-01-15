@@ -17,7 +17,7 @@ npm install -g luabundler
 ```
 
 # Usage
-luabundler takes an input Lua file, and recursively collects all the `require()`d modules and bundles them input a single output bundle.
+luabundler takes an input Lua file, and recursively collects all the `require()`d modules and bundles them into a single output bundle.
 
 ```bash
 luabundler input.lua -p "/path/to/lua/?.lua" -o bundle.lua
