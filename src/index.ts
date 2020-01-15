@@ -17,7 +17,7 @@ import {
 import {bundle} from './bundle'
 
 class BundleCommand extends Command {
-	static description = 'describe the command here'
+	static description = 'Bundles several Lua files into a single file'
 
 	static flags = {
 		version: flags.version({char: 'v'}),
