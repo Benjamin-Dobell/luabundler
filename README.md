@@ -8,29 +8,32 @@ Bundles several Lua files into a single file.
 [![Downloads/week](https://img.shields.io/npm/dw/luabundler.svg)](https://npmjs.org/package/luabundler)
 [![License](https://img.shields.io/npm/l/luabundler.svg)](https://github.com/Benjamin-Dobell/luabundler/blob/master/package.json)
 
-<!-- toc -->
 * [Installation](#installation)
 * [Usage](#usage)
-<!-- tocstop -->
 
 # Installation
-<!-- installation -->
 ```bash
 npm install -g luabundler
 ```
-<!-- installationstop -->
 
 # Usage
-<!-- usage -->
-```sh-session
-$ npm install -g luabundler
-$ luabundler COMMAND
-running command...
-$ luabundler (-v|--version|version)
-luabundler/0.9.0 darwin-x64 node-v13.6.0
-$ luabundler --help [COMMAND]
-USAGE
-  $ luabundler COMMAND
-...
+luabundler takes an input Lua file, and recursively collects all the `require()`d modules and bundles them input a single output bundle.
+
+```bash
+luabundler input.lua -p "/path/to/lua/?.lua" -o bundle.lua
 ```
-<!-- usagestop -->
+
+If you don't specify an output file (`-o`), the resultant bundle will be printed to your terminal.
+
+## Search Paths
+
+In order, to know where to look for required files, you must provide one or more [search path patterns](https://www.lua.org/pil/8.1.html).
+
+In addition to allowing you to add directories to search within, the pattern format allows you to configure supported file extensions as well.
+
+For example, it's fairly common practice for Lua scripts written for Tabletop Simulator to use the `.ttslua` extension:
+
+
+```bash
+luabundler input_file.lua -p "/path/to/lua/?.lua" -p "/path/to/mod/?.ttslua"  -o output_bundle.lua
+```
