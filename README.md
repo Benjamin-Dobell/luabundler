@@ -9,9 +9,17 @@ Bundles several Lua files into a single file.
 [![License](https://img.shields.io/npm/l/luabundler.svg)](https://github.com/Benjamin-Dobell/luabundler/blob/master/package.json)
 
 <!-- toc -->
+* [Installation](#installation)
 * [Usage](#usage)
-* [Commands](#commands)
 <!-- tocstop -->
+
+# Installation
+<!-- installation -->
+```bash
+npm install -g luabundler
+```
+<!-- installationstop -->
+
 # Usage
 <!-- usage -->
 ```sh-session
@@ -26,7 +34,3 @@ USAGE
 ...
 ```
 <!-- usagestop -->
-# Commands
-<!-- commands -->
-
-<!-- commandsstop -->

@@ -1,29 +1,51 @@
-import {Command, flags} from '@oclif/command'
+import {
+	existsSync,
+	mkdirSync,
+	writeFileSync,
+} from 'fs'
 
-class Luabundler extends Command {
+import {
+	resolve as resolvePath,
+	dirname,
+} from 'path'
+
+import {
+	Command,
+	flags,
+} from '@oclif/command'
+
+import {bundle} from './bundle'
+
+class BundleCommand extends Command {
 	static description = 'describe the command here'
 
 	static flags = {
-		// add --version flag to show CLI version
 		version: flags.version({char: 'v'}),
 		help: flags.help({char: 'h'}),
-		// flag with a value (-n, --name=VALUE)
-		name: flags.string({char: 'n', description: 'name to print'}),
-		// flag with no value (-f, --force)
-		force: flags.boolean({char: 'f'}),
+		path: flags.string({char: 'p', description: 'Add a require path pattern', multiple: true, required: true}),
+		output: flags.string({char: 'o', description: 'Bundle output path'}),
 	}
 
-	static args = [{name: 'file'}]
+	static args = [{name: 'file', required: true}]
 
 	async run() {
-		const {args, flags} = this.parse(Luabundler)
+		const {args, flags} = this.parse(BundleCommand)
 
-		const name = flags.name || 'world'
-		this.log(`hello ${name} from ./src/index.ts`)
-		if (args.file && flags.force) {
-			this.log(`you input --force and --file: ${args.file}`)
+		const content = bundle(args.file, flags.path)
+
+		if (flags.output) {
+			const resolvedPath = resolvePath(flags.output)
+			const resolvedDir = dirname(resolvedPath)
+
+			if (!existsSync(resolvedDir)) {
+				mkdirSync(resolvedDir, {recursive: true})
+			}
+
+			writeFileSync(flags.output, content)
+		} else {
+			console.log(content)
 		}
 	}
 }
 
-export = Luabundler
+export = BundleCommand

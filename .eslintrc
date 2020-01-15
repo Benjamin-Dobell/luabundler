@@ -7,6 +7,24 @@
 		"indent": [
 			"error",
 			"tab"
+		],
+		"max-params": "off",
+		"operator-linebreak": [
+			"error",
+			"before"
+		],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"singleline": {
+					"delimiter": "comma",
+					"requireLast": false
+				},
+				"multiline": {
+					"delimiter": "comma",
+					"requireLast": true
+				}
+			}
 		]
 	}
 }
