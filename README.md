@@ -27,7 +27,7 @@ If you don't specify an output file (`-o`), the resultant bundle will be printed
 
 ## Search Paths
 
-In order, to know where to look for required files, you must provide one or more [search path patterns](https://www.lua.org/pil/8.1.html).
+In order to know where to look for required files, you must provide one or more [search path patterns](https://www.lua.org/pil/8.1.html).
 
 In addition to allowing you to add directories to search within, the pattern format allows you to configure supported file extensions as well.
 
