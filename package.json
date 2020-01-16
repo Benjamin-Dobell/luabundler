@@ -15,7 +15,6 @@
 		"tslib": "^1"
 	},
 	"devDependencies": {
-		"@oclif/dev-cli": "^1",
 		"@types/luaparse": "^0.2.6",
 		"@types/node": "^13.1.6",
 		"eslint": "^6.8.0",
@@ -44,8 +43,7 @@
 	"scripts": {
 		"build": "rm -rf lib && tsc -b",
 		"posttest": "eslint . --ext .ts --config .eslintrc",
-		"test": "echo NO TESTS",
-		"version": "oclif-dev readme && git add README.md"
+		"test": "echo NO TESTS"
 	},
 	"types": "lib/index.d.ts"
 }
