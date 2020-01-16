@@ -16,21 +16,36 @@ import {
 
 import bundle, {Options as BundleOptions} from 'luabundle'
 
+import {Expression} from 'luaparse'
+
+type LuaVersion = Required<BundleOptions>['luaVersion']
+
+const luaVersions: LuaVersion[] = ['5.1', '5.2', '5.3', 'LuaJIT']
+
 class BundleCommand extends Command {
 	static description = 'Bundles several Lua files into a single file'
 
 	static flags = {
-		version: flags.version({char: 'v'}),
 		help: flags.help({char: 'h'}),
-		path: flags.string({char: 'p', description: 'Add a require path pattern', multiple: true, required: true}),
+		isolate: flags.boolean({char: 'i', description: 'Disables require() fallback at runtime for modules not found in the bundle.', default: false}),
+		lua: flags.enum<LuaVersion>({char: 'l', description: 'Lua syntax version', options: luaVersions, default: '5.3'}),
 		output: flags.string({char: 'o', description: 'Bundle output path'}),
+		path: flags.string({char: 'p', description: 'Add a require path pattern', multiple: true, required: true}),
+		version: flags.version({char: 'v'}),
 	}
 
 	static args = [{name: 'file', required: true}]
 
 	async run() {
 		const {args, flags} = this.parse(BundleCommand)
-		const options: BundleOptions = {}
+		const options: BundleOptions = {
+			luaVersion: flags.lua,
+			isolate: flags.isolate,
+			expressionHandler: (module: string, expression: Expression) => {
+				const start = expression.loc!.start
+				console.warn(`WARNING: Non-literal require found in '${module}' at ${start.line}:${start.column}`)
+			},
+		}
 
 		if (flags.path.length > 0) {
 			options.paths = flags.path

@@ -824,10 +824,10 @@ lodash@^4.17.14, lodash@^4.17.15:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-luabundle@^0.9.2:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-0.9.2.tgz#6b029654e2ef87e0cba550105179ce973ecc10fd"
-  integrity sha512-pmBsloaUqR7SpseyOqSWyKusXveVsHd8eH+yhh1oDBRlW7O/ZKomMic9NJmLGgvjq7BIlFHGEuACqCmVzlsACw==
+luabundle@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-1.0.0.tgz#2d3f535adc2a6cd0980975510d9671f19b476ac5"
+  integrity sha512-QP/aHmlgm2nD7+sCQRLFfrM4sT3IEHleqiLwRSmN3KH7H+Yz+tgWZQ0KNGeC0GsZFjRC9I5hCdAom0Y+r2OQXQ==
   dependencies:
     luaparse "^0.2.1"
     tslib "^1"
