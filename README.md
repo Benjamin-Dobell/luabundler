@@ -1,7 +1,9 @@
 luabundler
 ==========
 
-Bundles several Lua files into a single file.
+CLI tool for bundling several Lua files into a single file.
+
+If you're looking for an API, see [luabundle](https://github.com/Benjamin-Dobell/luabundle)
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/luabundler.svg)](https://npmjs.org/package/luabundler)

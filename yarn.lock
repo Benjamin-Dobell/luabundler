@@ -93,10 +93,10 @@
   resolved "https://registry.yarnpkg.com/@types/luaparse/-/luaparse-0.2.6.tgz#d0f25c8fac176204e75421ff7081ce482b3d7933"
   integrity sha512-C/TORXCQgPwunpAk9ELsbOsR8fX8Vw1Y2yVdlBnC+RPA85iOT00gEZ0AxoXQRVepLwoIfWqA8t2NvnlVs0aPgw==
 
-"@types/node@^13.1.6":
-  version "13.1.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.6.tgz#076028d0b0400be8105b89a0a55550c86684ffec"
-  integrity sha512-Jg1F+bmxcpENHP23sVKkNuU3uaxPnsBMW0cLjleiikFKomJQbsn0Cqk2yDvQArqzZN6ABfBkZ0To7pQ8sLdWDg==
+"@types/node@^13.1.7":
+  version "13.1.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.7.tgz#db51d28b8dfacfe4fb2d0da88f5eb0a2eca00675"
+  integrity sha512-HU0q9GXazqiKwviVxg9SI/+t/nAsGkvLDkIdxz+ObejG2nX6Si00TeLqHMoS+a/1tjH7a8YpKVQwtgHuMQsldg==
 
 "@typescript-eslint/eslint-plugin@^2.6.1":
   version "2.16.0"
@@ -823,6 +823,14 @@ lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+luabundle@^0.9.2:
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-0.9.2.tgz#6b029654e2ef87e0cba550105179ce973ecc10fd"
+  integrity sha512-pmBsloaUqR7SpseyOqSWyKusXveVsHd8eH+yhh1oDBRlW7O/ZKomMic9NJmLGgvjq7BIlFHGEuACqCmVzlsACw==
+  dependencies:
+    luaparse "^0.2.1"
+    tslib "^1"
 
 luaparse@^0.2.1:
   version "0.2.1"

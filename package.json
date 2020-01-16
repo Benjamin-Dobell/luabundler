@@ -1,7 +1,7 @@
 {
 	"name": "luabundler",
 	"description": "Bundles several Lua files into a single file.",
-	"version": "0.9.0",
+	"version": "0.9.1",
 	"author": "Benjamin Dobell @Benjamin-Dobell",
 	"bin": {
 		"luabundler": "./bin/run"
@@ -11,12 +11,13 @@
 		"@oclif/command": "^1",
 		"@oclif/config": "^1",
 		"@oclif/plugin-help": "^2",
+		"luabundle": "^0.9.2",
 		"luaparse": "^0.2.1",
 		"tslib": "^1"
 	},
 	"devDependencies": {
 		"@types/luaparse": "^0.2.6",
-		"@types/node": "^13.1.6",
+		"@types/node": "^13.1.7",
 		"eslint": "^6.8.0",
 		"eslint-config-oclif": "^3.1",
 		"eslint-config-oclif-typescript": "^0.1",
@@ -32,7 +33,11 @@
 	],
 	"homepage": "https://github.com/Benjamin-Dobell/luabundler",
 	"keywords": [
-		"oclif"
+		"lua",
+		"require",
+		"modules",
+		"bundler",
+		"bundling"
 	],
 	"license": "MIT",
 	"main": "lib/index.js",
@@ -42,8 +47,8 @@
 	"repository": "Benjamin-Dobell/luabundler",
 	"scripts": {
 		"build": "rm -rf lib && tsc -b",
+		"prepack": "rm -rf lib && tsc -b",
 		"posttest": "eslint . --ext .ts --config .eslintrc",
 		"test": "echo NO TESTS"
-	},
-	"types": "lib/index.d.ts"
+	}
 }

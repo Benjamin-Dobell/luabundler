@@ -14,7 +14,7 @@ import {
 	flags,
 } from '@oclif/command'
 
-import {bundle} from './bundle'
+import bundle, {Options as BundleOptions} from 'luabundle'
 
 class BundleCommand extends Command {
 	static description = 'Bundles several Lua files into a single file'
@@ -30,8 +30,13 @@ class BundleCommand extends Command {
 
 	async run() {
 		const {args, flags} = this.parse(BundleCommand)
+		const options: BundleOptions = {}
 
-		const content = bundle(args.file, flags.path)
+		if (flags.path.length > 0) {
+			options.paths = flags.path
+		}
+
+		const content = bundle(args.file, options)
 
 		if (flags.output) {
 			const resolvedPath = resolvePath(flags.output)
