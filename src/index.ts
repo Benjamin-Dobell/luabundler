@@ -14,7 +14,7 @@ import {
 	flags,
 } from '@oclif/command'
 
-import bundle, {Options as BundleOptions} from 'luabundle'
+import bundle, {Options as BundleOptions, Module} from 'luabundle'
 
 import {Expression} from 'luaparse'
 
@@ -41,9 +41,9 @@ class BundleCommand extends Command {
 		const options: BundleOptions = {
 			luaVersion: flags.lua,
 			isolate: flags.isolate,
-			expressionHandler: (module: string, expression: Expression) => {
+			expressionHandler: (module: Module, expression: Expression) => {
 				const start = expression.loc!.start
-				console.warn(`WARNING: Non-literal require found in '${module}' at ${start.line}:${start.column}`)
+				console.warn(`WARNING: Non-literal require found in '${module.name}' at ${start.line}:${start.column}`)
 			},
 		}
 
