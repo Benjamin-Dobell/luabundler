@@ -11,13 +11,13 @@
 		"@oclif/command": "^1",
 		"@oclif/config": "^1",
 		"@oclif/plugin-help": "^2",
-		"luabundle": "^1.2.0",
+		"luabundle": "^1.2.1",
 		"luaparse": "^0.2.1",
 		"tslib": "^1"
 	},
 	"devDependencies": {
 		"@types/luaparse": "^0.2.6",
-		"@types/node": "^13.1.7",
+		"@types/node": "^13.1.8",
 		"eslint": "^6.8.0",
 		"eslint-config-oclif": "^3.1",
 		"eslint-config-oclif-typescript": "^0.1",
