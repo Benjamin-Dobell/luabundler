@@ -911,18 +911,13 @@ lodash@^4.17.14, lodash@^4.17.15:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-luabundle@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-1.3.0.tgz#06a9fd92472d763d4ac78abfeb057f8bc37461f3"
-  integrity sha512-q948X6z9jHVySyj4XdCC6ZGQ/I5x3BZl0D7ighcJBmiqi1cjdlRoJPPsZprD5KRo7EZ1Vn+YNt33+cLt5peu5w==
+luabundle@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-1.3.1.tgz#25b012ffd04fdacac11a26825f65072f5702ea28"
+  integrity sha512-HJp+edMYnLMADDN1GVf4i3/7GjUXZfuJEUwvjSlYtlU4qXwXc9AohDV/UhpjueZUsfvpqHaRYGbKaqFEwGcKKA==
   dependencies:
-    luaparse "^0.2.1"
+    moonsharp-luaparse "^0.2.3"
     tslib "^1"
-
-luaparse@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/luaparse/-/luaparse-0.2.1.tgz#aa8f56132b0de97d37f3c991a9df42e0e17f656c"
-  integrity sha1-qo9WEysN6X0388mRqd9C4OF/ZWw=
 
 make-error@^1.1.1:
   version "1.3.5"
@@ -965,6 +960,11 @@ mkdirp@^0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+moonsharp-luaparse@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/moonsharp-luaparse/-/moonsharp-luaparse-0.2.3.tgz#f8308c22d72f315c06b5bb3a44f334551cad54a8"
+  integrity sha512-agD04/3xT32vtUpUl/ptfJqdoGGo7hJZRakMSjMxEnTm4nFnPI1ZpvoPaV5nkTe14gDxhmYlnr9cP1Kmo5RuXg==
 
 ms@^2.1.1:
   version "2.1.2"

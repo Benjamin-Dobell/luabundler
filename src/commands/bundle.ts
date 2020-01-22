@@ -20,7 +20,7 @@ import {
 	Module,
 } from 'luabundle'
 
-import {Expression} from 'luaparse'
+import {Expression} from 'moonsharp-luaparse'
 
 type LuaVersion = Required<BundleOptions>['luaVersion']
 
