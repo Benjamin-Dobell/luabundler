@@ -1,7 +1,7 @@
 {
 	"name": "luabundler",
 	"description": "Bundles several Lua files into a single file.",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"author": "Benjamin Dobell @Benjamin-Dobell",
 	"bin": {
 		"luabundler": "./bin/run"
