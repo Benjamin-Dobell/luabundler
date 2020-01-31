@@ -52,7 +52,7 @@ export default class UnbundleCommand extends Command {
 
 			for (const module of Object.values<Module>(unbundled.modules)) {
 				if (module.name !== unbundled.metadata.rootModuleName) {
-					const modulePath = resolvePath(modulesDir, module.name) + '.' + extension
+					const modulePath = resolvePath(modulesDir, module.name) + (extension ? '.' + extension : '')
 					const moduleDir = dirname(modulePath)
 
 					if (!existsSync(moduleDir)) {
