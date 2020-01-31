@@ -114,10 +114,10 @@
   resolved "https://registry.yarnpkg.com/@types/luaparse/-/luaparse-0.2.6.tgz#d0f25c8fac176204e75421ff7081ce482b3d7933"
   integrity sha512-C/TORXCQgPwunpAk9ELsbOsR8fX8Vw1Y2yVdlBnC+RPA85iOT00gEZ0AxoXQRVepLwoIfWqA8t2NvnlVs0aPgw==
 
-"@types/node@^13.1.8":
-  version "13.1.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.8.tgz#1d590429fe8187a02707720ecf38a6fe46ce294b"
-  integrity sha512-6XzyyNM9EKQW4HKuzbo/CkOIjn/evtCmsU+MUM1xDfJ+3/rNjBttM1NgN7AOQvN6tP1Sl1D1PIKMreTArnxM9A==
+"@types/node@^13.5.3":
+  version "13.5.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.5.3.tgz#37f1f539b7535b9fb4ef77d59db1847a837b7f17"
+  integrity sha512-ZPnWX9PW992w6DUsz3JIXHaSb5v7qmKCVzC3km6SxcDGxk7zmLfYaCJTbktIa5NeywJkkZDhGldKqDIvC5DRrA==
 
 "@typescript-eslint/eslint-plugin@^2.6.1":
   version "2.16.0"
@@ -911,10 +911,10 @@ lodash@^4.17.14, lodash@^4.17.15:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
-luabundle@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-1.3.1.tgz#25b012ffd04fdacac11a26825f65072f5702ea28"
-  integrity sha512-HJp+edMYnLMADDN1GVf4i3/7GjUXZfuJEUwvjSlYtlU4qXwXc9AohDV/UhpjueZUsfvpqHaRYGbKaqFEwGcKKA==
+luabundle@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/luabundle/-/luabundle-1.4.0.tgz#c4b662809c17131d884b684502ea8b0ab7e241b5"
+  integrity sha512-V2+L1xNhh/InthjKzPBAKoVf4+nf0A9w3LpdRG6+aIVxo807qe2Ebl7ZHINUb5x1hwugtRyTll1TFdLMqg9/Bg==
   dependencies:
     moonsharp-luaparse "^0.2.3"
     tslib "^1"
