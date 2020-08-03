@@ -8,22 +8,21 @@
 	},
 	"bugs": "https://github.com/Benjamin-Dobell/luabundler/issues",
 	"dependencies": {
-		"@oclif/command": "^1",
-		"@oclif/config": "^1",
-		"@oclif/plugin-help": "^2",
-		"luabundle": "^1.4.0",
-		"moonsharp-luaparse": "^0.2.3",
-		"tslib": "^1"
+		"@oclif/command": "^1.7.0",
+		"@oclif/config": "^1.16.0",
+		"@oclif/plugin-help": "^3.1.0",
+		"luabundle": "^1.6.0",
+		"moonsharp-luaparse": "^0.2.4",
+		"tslib": "^2.0.0"
 	},
 	"devDependencies": {
-		"@types/luaparse": "^0.2.6",
-		"@types/node": "^13.5.3",
-		"eslint": "^6.8.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.6.0",
 		"eslint-config-oclif": "^3.1",
-		"eslint-config-oclif-typescript": "^0.1",
-		"globby": "^11.0.0",
-		"ts-node": "^8",
-		"typescript": "^3.7.5"
+		"eslint-config-oclif-typescript": "^0.2.0",
+		"globby": "^11.0.1",
+		"ts-node": "^8.10.2",
+		"typescript": "^3.9.7"
 	},
 	"engines": {
 		"node": ">=8.0.0"
