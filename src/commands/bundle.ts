@@ -1,6 +1,7 @@
 import {
 	existsSync,
 	mkdirSync,
+	readFile,
 	writeFileSync,
 } from 'fs'
 
@@ -17,8 +18,13 @@ import {
 import {
 	bundle,
 	BundleOptions,
+	bundleString,
 	Module,
 } from 'luabundle'
+
+import {
+	readStdin,
+} from "../util"
 
 import {Expression} from 'moonsharp-luaparse'
 
@@ -55,7 +61,13 @@ export default class BundleCommand extends Command {
 			options.paths = flags.path
 		}
 
-		const content = bundle(args.file, options)
+		let content
+		if (args.file == "-") {
+			content = bundleString(await readStdin(), options)
+		} else {
+			content = bundle(args.file, options)
+		}
+
 
 		if (flags.output) {
 			const resolvedPath = resolvePath(flags.output)
