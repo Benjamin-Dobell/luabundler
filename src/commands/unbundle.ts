@@ -36,7 +36,13 @@ export default class UnbundleCommand extends Command {
 		version: flags.version({char: 'v'}),
 	}
 
-	static args = [{name: 'file', required: true}]
+	static args = [
+		{
+			name: 'file',
+			required: false,
+			description: 'Lua bundle file path. May be omitted to read from stdin instead.',
+		},
+	]
 
 	async run() {
 		const {args, flags} = this.parse(UnbundleCommand)
@@ -47,7 +53,8 @@ export default class UnbundleCommand extends Command {
 		}
 
 		let unbundled
-		if (args.file === '-') {
+
+		if (!args.file || args.file === '-') {
 			unbundled = unbundleString(await readStdin(), options)
 		} else {
 			unbundled = unbundle(args.file, options)

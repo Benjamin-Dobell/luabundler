@@ -43,7 +43,13 @@ export default class BundleCommand extends Command {
 		version: flags.version({char: 'v'}),
 	}
 
-	static args = [{name: 'file', required: true}]
+	static args = [
+		{
+			name: 'file',
+			required: false,
+			description: 'Lua entry-point module file path. May be omitted to read from stdin instead.',
+		},
+	]
 
 	async run() {
 		const {args, flags} = this.parse(BundleCommand)
@@ -61,7 +67,8 @@ export default class BundleCommand extends Command {
 		}
 
 		let content
-		if (args.file === '-') {
+
+		if (!args.file || args.file === '-') {
 			content = bundleString(await readStdin(), options)
 		} else {
 			content = bundle(args.file, options)
