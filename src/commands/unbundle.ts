@@ -1,7 +1,6 @@
 import {
 	existsSync,
 	mkdirSync,
-	readFile,
 	writeFileSync,
 } from 'fs'
 
@@ -9,10 +8,6 @@ import {
 	dirname,
 	resolve as resolvePath,
 } from 'path'
-
-import {
-	stdin,
-} from 'process'
 
 import {
 	Command,
@@ -28,7 +23,7 @@ import {
 
 import {
 	readStdin,
-} from "../util"
+} from '../util'
 
 export default class UnbundleCommand extends Command {
 	static description = 'Unbundles a Lua bundle into individual files'
@@ -52,7 +47,7 @@ export default class UnbundleCommand extends Command {
 		}
 
 		let unbundled
-		if (args.file == "-") {
+		if (args.file === '-') {
 			unbundled = unbundleString(await readStdin(), options)
 		} else {
 			unbundled = unbundle(args.file, options)

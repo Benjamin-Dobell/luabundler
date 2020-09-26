@@ -1,7 +1,6 @@
 import {
 	existsSync,
 	mkdirSync,
-	readFile,
 	writeFileSync,
 } from 'fs'
 
@@ -24,7 +23,7 @@ import {
 
 import {
 	readStdin,
-} from "../util"
+} from '../util'
 
 import {Expression} from 'moonsharp-luaparse'
 
@@ -62,12 +61,11 @@ export default class BundleCommand extends Command {
 		}
 
 		let content
-		if (args.file == "-") {
+		if (args.file === '-') {
 			content = bundleString(await readStdin(), options)
 		} else {
 			content = bundle(args.file, options)
 		}
-
 
 		if (flags.output) {
 			const resolvedPath = resolvePath(flags.output)
