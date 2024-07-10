@@ -28,7 +28,7 @@ import {
 export default class UnbundleCommand extends Command {
 	static description = 'Unbundles a Lua bundle into individual files'
 
-	static flags = {
+	static flags: flags.Input<any> = {
 		help: flags.help({char: 'h'}),
 		modules: flags.string({char: 'm', description: 'Output directory path where modules should be written.'}),
 		extension: flags.string({char: 'e', description: 'File extension of output modules. Only relevant when --modules (-m) is specified.', default: 'lua'}),

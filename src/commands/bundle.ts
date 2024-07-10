@@ -34,7 +34,7 @@ const luaVersions: LuaVersion[] = ['5.1', '5.2', '5.3', 'LuaJIT']
 export default class BundleCommand extends Command {
 	static description = 'Bundles a Lua file and its dependencies into a single file'
 
-	static flags = {
+	static flags: flags.Input<any> = {
 		help: flags.help({char: 'h'}),
 		isolate: flags.boolean({char: 'i', description: 'Disables require() fallback at runtime for modules not found in the bundle.', default: false}),
 		lua: flags.enum<LuaVersion>({char: 'l', description: 'Lua syntax version', options: luaVersions, default: '5.3'}),
