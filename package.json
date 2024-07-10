@@ -11,7 +11,7 @@
 		"@oclif/command": "^1.7.0",
 		"@oclif/config": "^1.16.0",
 		"@oclif/plugin-help": "^3.1.0",
-		"luabundle": "^1.6.0",
+		"luabundle": "^1.7.0",
 		"moonsharp-luaparse": "^0.2.4",
 		"tslib": "^2.0.0"
 	},
@@ -54,5 +54,6 @@
 		"prepack": "rm -rf lib && tsc -b",
 		"posttest": "eslint . --ext .ts --config .eslintrc",
 		"test": "echo NO TESTS"
-	}
+	},
+	"packageManager": "pnpm@8.6.3+sha512.d18e277ae8072091046bccbca0931f77dc3080791cd6122ae890bf504125d8af76b37fb33da287dba9fbbb6da6ebb13e314e9fa4a464c7effe3d8599cebe7243"
 }
